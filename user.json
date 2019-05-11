@@ -1,0 +1,1 @@
+{"_id":{"$oid":"5cc588f6ecfb3d37b4aa83e9"},"password":"$2a$10$s6wDb1fLBRJ4mfx.HgsADeflKeK9Ak.cwzwj3n/TboXlxiJ1zJq52","email":"dragan_colic@yahoo.com","isAdmin":true,"name":{"last":"User","first":"Admin"},"__v":{"$numberInt":"0"}}
