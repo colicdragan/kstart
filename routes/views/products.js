@@ -16,6 +16,5 @@ exports = module.exports = function (req, res) {
 	view.render('products', {
 		_products: i18n.__('Products'),
 		_product: i18n.__('Product'),
-		__: i18n.__,
 	});
 };
