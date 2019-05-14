@@ -20,6 +20,8 @@ exports = module.exports = function (req, res) {
 			next(err);
 		});
 	});
+	// Load ProductCategory
+	view.query('productscategory', keystone.list('ProductCategory').model.find());
 	// Render View
 	view.render('product');
 };

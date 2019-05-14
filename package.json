@@ -8,6 +8,7 @@
     "dotenv": "4.0.0",
     "express-handlebars": "3.0.0",
     "handlebars": "4.0.6",
+    "i18n-2": "^0.7.3",
     "keystone": "4.0.0-beta.5",
     "keystone-email": "1.0.5",
     "keystone-multilingual": "^1.0.0",

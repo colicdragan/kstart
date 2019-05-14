@@ -6,6 +6,17 @@ require('dotenv').config();
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
 
+// Load Module and Instantiate
+var i18n = new (require('i18n-2'))({
+	// setup some locales - other locales default to the first locale
+	locales: ['sr', 'en'],
+});
+
+// Use it however you wish
+console.log(i18n.__('Hello!'));
+i18n.setLocale('en');
+console.log(i18n.__('Hello!'));
+
 keystone.init({
 	'name': 'kstart',
 	'brand': 'kstart',
@@ -38,6 +49,7 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable,
 });
+
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {

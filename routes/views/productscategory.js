@@ -21,6 +21,8 @@ exports = module.exports = function (req, res) {
 			next(err);
 		});
 	});*/
+	// Load ProductCategory
+	view.query('productscategory', keystone.list('ProductCategory').model.find());
 	// Load Products
 	view.query('products', keystone.list('Product').model.find({
 		category: locals.filters.category,

@@ -1,10 +1,17 @@
 var _ = require('lodash');
+var keystone = require('keystone');
 
 
 /**
 	Initialises the standard view locals
 */
 exports.initLocals = function (req, res, next) {
+	/*var view = new keystone.View(req, res);
+	var q;
+	// Load ProductCategory
+	q = view.query('productscategory', keystone.list('ProductCategory').model.find());
+	console.log(q);*/
+	
 	res.locals.navLinks = [
 		{ label: 'Home', key: 'home', href: '/' },
 		{ label: 'Blog', key: 'blog', href: '/blog' },

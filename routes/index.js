@@ -1,6 +1,11 @@
 var keystone = require('keystone');
 var middleware = require('./middleware');
 var importRoutes = keystone.importer(__dirname);
+var i18n = new (require('i18n-2'))({
+	// setup some locales - other locales default to the first locale
+	locales: ['sr', 'en'],
+});
+
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
@@ -14,6 +19,7 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
+	console.log(i18n.__('Hello!'));
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
